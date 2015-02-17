@@ -1,0 +1,16 @@
+{
+    "contents" : "\n# This is the user-interface definition of a Shiny web application.\n# You can find out more about building applications with Shiny here:\n#\n# http://shiny.rstudio.com\n#\n\nlibrary(shiny)\n\nshinyUI(fluidPage(\n\n  # Application title\n  titlePanel(\"Predict your height!\"),\n\n  # Sidebar with a slider input for number of bins\n  sidebarLayout(\n    sidebarPanel(\n        numericInput('pheight','Parents height in inches',70,min=48,max=84,step=.5)\n    ),\n\n    # Show a plot of the generated distribution\n    mainPanel(\n      h2('Your predicted height is:'),\n      textOutput(\"predheight\")\n    )\n  )\n))\n",
+    "created" : 1424182879868.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4183327999",
+    "id" : "3D47C148",
+    "lastKnownWriteTime" : 1424184109,
+    "path" : "C:/Users/elarsen/Coursera work/DevelopingDataProducts/DDPassignment/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

@@ -1,0 +1,16 @@
+{
+    "contents" : "\n# This is the server logic for a Shiny web application.\n# You can find out more about building applications with Shiny here:\n#\n# http://shiny.rstudio.com\n#\n\nlibrary(shiny)\nlibrary(UsingR)\ndata(galton)\nlmPredict <- lm(galton$child ~ galton$parent)\n\nshinyServer(function(input, output) {\n    \n        \n    output$predheight<-renderText(lmPredict$coeff[1] + lmPredict$coeff[2] * input$pheight)\n    \n\n})\n",
+    "created" : 1424182880336.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4020992337",
+    "id" : "465E86FB",
+    "lastKnownWriteTime" : 1424184530,
+    "path" : "C:/Users/elarsen/Coursera work/DevelopingDataProducts/DDPassignment/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
