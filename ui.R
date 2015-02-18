@@ -15,7 +15,8 @@ shinyUI(fluidPage(
   # Sidebar with a slider input for number of bins
   sidebarLayout(
     sidebarPanel(
-        numericInput('pheight','Parents height in inches',70,min=48,max=84,step=.5)
+        numericInput('dheight','Fathers height in inches',70,min=48,max=84,step=.5),
+        numericInput('mheight','Mothers height in inches',70,min=48,max=84,step=.5)
     ),
 
     # Show a plot of the generated distribution
