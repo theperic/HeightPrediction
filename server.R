@@ -11,6 +11,7 @@ data(galton)
 lmPredict <- lm(galton$child ~ galton$parent)
 
 shinyServer(function(input, output) {
-    output$predheight<- renderText(round(lmPredict$coeff[1] + lmPredict$coeff[2] *(input$dheight+input$mheight)/2,1))
+    output$predheight<- renderText(round(lmPredict$coeff[1] + lmPredict$coeff[2] 
+                                         *(input$dheight+input$mheight)*as.numeric(input$gender)/2,1))
     
 })
